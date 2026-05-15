@@ -1,0 +1,211 @@
+@import './variables.css';
+
+.contacts-column {
+  width: 320px;
+  background-color: white;
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.contacts-header {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.contact-search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f1f3f6;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+.contact-search-bar input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.search-icon, .filter-icon {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+.contacts-filter-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.contacts-filter-bar .title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.contacts-filter-bar .reminders {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.chips-container {
+  display: flex;
+  padding: 10px 15px;
+  gap: 8px;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 11px;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.chip {
+  background-color: var(--chip-bg);
+  padding: 4px 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+.chip:hover {
+  background-color: var(--hover-bg);
+}
+
+.chip.active {
+  background-color: var(--chip-active-bg);
+  color: var(--teal-btn);
+  border: 1px solid var(--teal-btn);
+  font-weight: 500;
+}
+
+.chip .count {
+  background-color: var(--hover-bg);
+  padding: 1px 6px;
+  border-radius: 10px;
+  font-size: 10px;
+  color: var(--text-dark);
+}
+
+.activity-sort {
+  margin-left: auto;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.contacts-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contact-item {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+}
+
+.contact-item:hover {
+  background-color: var(--hover-bg);
+}
+
+.contact-item.active {
+  background-color: var(--contact-active-bg);
+  border-left: 3px solid var(--teal-btn);
+}
+
+.contact-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.name-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-dark);
+}
+
+.verified {
+  color: #1a73e8;
+  font-size: 14px;
+}
+
+.verified-shield {
+  color: #fbbc04;
+  font-size: 14px;
+}
+
+.date {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.location {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.message-preview {
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 6px;
+}
+
+.message-preview.italic {
+  font-style: italic;
+}
+
+.product-tag {
+  display: inline-block;
+  background-color: var(--hover-bg);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  color: var(--text-dark);
+}
+
+.scroll-to-top {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--teal-btn);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.scroll-to-top:hover {
+  background-color: #009688;
+}

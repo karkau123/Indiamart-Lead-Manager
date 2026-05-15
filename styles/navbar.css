@@ -1,0 +1,167 @@
+@import './variables.css';
+
+.top-nav {
+  height: 56px;
+  background-color: var(--primary-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.m-logo {
+  background-color: var(--im-red);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.brand-text {
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 36px;
+}
+
+.search-container .dropdown {
+  color: var(--text-dark);
+  padding: 0 10px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
+}
+
+.search-container .dropdown:hover {
+  background-color: var(--hover-bg);
+}
+
+.search-container .divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--border-color);
+}
+
+.search-container input {
+  border: none;
+  padding: 0 15px;
+  width: 280px;
+  outline: none;
+  font-size: 13px;
+}
+
+.search-container .search-btn {
+  background-color: var(--teal-btn);
+  color: white;
+  border: none;
+  padding: 0 15px;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.search-btn:hover {
+  background-color: #009688;
+}
+
+.buy-btn {
+  background-color: white;
+  color: var(--primary-blue);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.buy-btn:hover {
+  background-color: #f1f3f6;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.8;
+  color: white;
+}
+
+.nav-icon:hover {
+  opacity: 1;
+}
+
+.nav-icon i {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.nav-icon.active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  background-color: var(--im-red);
+  color: white;
+  font-size: 9px;
+  padding: 2px 5px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-blue);
+}
+
+.nav-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.nav-profile:hover {
+  opacity: 1;
+}

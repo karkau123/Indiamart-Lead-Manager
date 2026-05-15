@@ -1,0 +1,20 @@
+:root {
+  --primary-blue: #2b3b70;
+  --im-red: #e31e24;
+  --bg-color: #f8f9fa;
+  --sidebar-bg: #ffffff;
+  --sidebar-active-text: #1a73e8;
+  --sidebar-active-bg: #f3f5f8;
+  --border-color: #e4e7eb;
+  --text-dark: #333333;
+  --text-muted: #6c757d;
+  --teal-btn: #00a699;
+  --wa-green: #25d366;
+  --msg-user-bg: #eaf6ec;
+  --msg-sys-bg: #ffffff;
+  --chip-bg: #ffffff;
+  --chip-active-bg: #eaf6ec;
+  --contact-active-bg: #f3f5f8;
+  --hover-bg: #f1f3f6;
+  --link-color: #1a73e8;
+}

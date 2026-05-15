@@ -1,0 +1,224 @@
+@import './variables.css';
+
+.chat-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+  background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23dce0e5" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+.chat-header {
+  height: 65px;
+  background-color: white;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+.chat-user-info h2 {
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: var(--text-dark);
+}
+
+.last-seen {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.user-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.user-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.user-meta i {
+  color: var(--teal-btn);
+  font-size: 13px;
+}
+
+.chat-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: white;
+  border: 1px solid var(--border-color);
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--text-dark);
+}
+
+.icon-btn:hover {
+  background: var(--hover-bg);
+}
+
+.icon-btn.primary {
+  background: var(--teal-btn);
+  color: white;
+  border: none;
+}
+
+.icon-btn.primary:hover {
+  background: #009688;
+}
+
+.view-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 9px;
+  color: var(--text-muted);
+  margin-left: 8px;
+  position: relative;
+}
+
+.view-more i {
+  color: var(--im-red);
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  font-size: 6px;
+}
+
+.chat-area {
+  flex: 1;
+  padding: 20px 40px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.system-msg {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.system-msg span {
+  background-color: white;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 11px;
+  color: var(--text-muted);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.msg-bubble {
+  max-width: 65%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.system-card {
+  background-color: var(--msg-sys-bg);
+  align-self: flex-start;
+  border: 1px solid #f1d5d5;
+  border-left: 3px solid var(--im-red);
+}
+
+.card-content {
+  display: flex;
+  gap: 15px;
+}
+
+.placeholder-img {
+  width: 50px;
+  height: 50px;
+  background-color: var(--hover-bg);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+.placeholder-img i {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.card-text p {
+  font-size: 12px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  color: var(--text-dark);
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+.call-icon {
+  background-color: #f1f3f6;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-msg {
+  background-color: var(--msg-user-bg);
+  align-self: flex-end;
+  border: 1px solid #cce8d0;
+  border-radius: 8px 0 8px 8px;
+}
+
+.user-msg p {
+  margin-bottom: 12px;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+.user-msg p:last-child {
+  margin-bottom: 0;
+}
+
+.user-msg .msg-link {
+  color: var(--link-color);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.user-msg .msg-link:hover {
+  text-decoration: underline;
+}
+
+.msg-actions {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
