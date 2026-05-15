@@ -983,6 +983,25 @@ button {
   transform: scale(0.95);
 }
 
+.message-input .mic.recording {
+  background: #ff4444;
+  animation: pulse-recording 1s infinite;
+  box-shadow: 0 0 15px rgba(255, 68, 68, 0.6);
+}
+
+.message-input .mic.recording:hover {
+  background: #e63939;
+}
+
+@keyframes pulse-recording {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 68, 68, 0.8);
+  }
+}
+
 .product-image {
   position: relative;
   width: 116px;
