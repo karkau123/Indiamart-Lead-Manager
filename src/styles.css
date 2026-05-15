@@ -407,11 +407,13 @@ button {
   display: flex;
   align-items: center;
   gap: 6px;
+  font-weight: 600;
 }
 
 .chip.reply svg {
   color: var(--teal);
   flex-shrink: 0;
+  stroke-width: 2.5;
 }
 
 .date-filter {
