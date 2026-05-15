@@ -403,15 +403,15 @@ button {
   color: #738290;
 }
 
-.chip.reply::before {
-  content: "";
-  width: 13px;
-  height: 13px;
-  display: inline-block;
-  margin-right: 5px;
-  border: 1.5px solid var(--teal);
-  border-radius: 50%;
-  vertical-align: -2px;
+.chip.reply {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chip.reply svg {
+  color: var(--teal);
+  flex-shrink: 0;
 }
 
 .date-filter {
