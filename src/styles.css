@@ -406,11 +406,19 @@ button {
 .chip.reply {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-weight: 600;
 }
 
-.chip.reply svg {
+.chip.reply .whatsapp-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #25d366;
+  filter: drop-shadow(0 0 3px rgba(37, 211, 102, 0.3));
+}
+
+.chip.reply svg:not(.whatsapp-icon) {
   color: var(--teal);
   flex-shrink: 0;
   stroke-width: 2.5;
