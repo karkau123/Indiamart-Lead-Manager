@@ -198,7 +198,7 @@ function ContactPane() {
       </div>
 
       <div className="chips-row">
-        <button className="chip reply">Reply Now</button>
+        <button className="chip reply"><MessageSquare size={16} /> WhatsApp</button>
         <button className="chip">Unread <span>0</span></button>
         <button className="chip">Fresh <span>0</span></button>
         <button className="date-filter">Activity Date <ChevronDown size={15} /></button>
