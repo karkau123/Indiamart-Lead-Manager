@@ -966,8 +966,21 @@ button {
   place-items: center;
   justify-self: end;
   border-radius: 50%;
-  background: #c9c9c9;
+  background: var(--teal);
   color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.message-input .mic:hover {
+  background: #008b7f;
+  transform: scale(1.05);
+}
+
+.message-input .mic:active {
+  background: #006b62;
+  transform: scale(0.95);
 }
 
 .product-image {
