@@ -307,7 +307,6 @@ function Composer() {
                 <Icon size={red ? 13 : pdf ? 13 : 15} fill={red || pdf ? "currentColor" : "none"} />
               </span>
               {label}
-              <MessageSquare size={17} className="chip-whatsapp" />
             </button>
           ))}
         </div>
