@@ -276,7 +276,7 @@ function Conversation() {
 
         <article className="message-card">
           <MoreHorizontal size={22} className="message-menu" />
-          <p>Hi Akanksha,</p>
+          <p><strong>Hi Akanksha,</strong></p>
           <p>
             We have received your enquiry on IndiaMART for Reverse Printing Lamination
             Inks.<br />Please confirm to proceed.
