@@ -295,6 +295,70 @@ function Conversation() {
 }
 
 function Composer() {
+  const [isRecording, setIsRecording] = React.useState(false);
+  const [audioBlob, setAudioBlob] = React.useState(null);
+  const mediaRecorderRef = React.useRef(null);
+  const audioChunksRef = React.useRef([]);
+
+  const startRecording = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mediaRecorder = new MediaRecorder(stream);
+      mediaRecorderRef.current = mediaRecorder;
+      audioChunksRef.current = [];
+
+      mediaRecorder.ondataavailable = (event) => {
+        audioChunksRef.current.push(event.data);
+      };
+
+      mediaRecorder.onstop = () => {
+        const blob = new Blob(audioChunksRef.current, { type: "audio/webm" });
+        setAudioBlob(blob);
+        stream.getTracks().forEach(track => track.stop());
+        // Auto-send the recording
+        sendVoiceMessage(blob);
+      };
+
+      mediaRecorder.start();
+      setIsRecording(true);
+    } catch (error) {
+      console.error("Error accessing microphone:", error);
+      alert("Please allow microphone access to use voice recording.");
+    }
+  };
+
+  const stopRecording = () => {
+    if (mediaRecorderRef.current && isRecording) {
+      mediaRecorderRef.current.stop();
+      setIsRecording(false);
+    }
+  };
+
+  const sendVoiceMessage = (blob) => {
+    // Create FormData to send the audio file
+    const formData = new FormData();
+    formData.append("audio", blob, "voice-message.webm");
+
+    console.log("🎙️ Voice message ready to send:", {
+      size: blob.size,
+      type: blob.type,
+      duration: "recorded",
+    });
+
+    // Here you would typically send to your backend
+    // fetch('/api/send-voice-message', { method: 'POST', body: formData })
+
+    alert("✅ Voice message recorded! Ready to send via WhatsApp.");
+  };
+
+  const handleMicClick = () => {
+    if (isRecording) {
+      stopRecording();
+    } else {
+      startRecording();
+    }
+  };
+
   return (
     <footer className="composer">
       <div className="quick-row">
@@ -338,7 +402,13 @@ function Composer() {
         <button><PenLine size={21} /></button>
         <button><FileText size={21} /></button>
         <button><Paperclip size={23} /></button>
-        <button className="mic"><Mic size={22} /></button>
+        <button 
+          className={`mic ${isRecording ? "recording" : ""}`}
+          onClick={handleMicClick}
+          title={isRecording ? "Click to stop recording" : "Click to start recording"}
+        >
+          <Mic size={22} />
+        </button>
       </div>
     </footer>
   );
