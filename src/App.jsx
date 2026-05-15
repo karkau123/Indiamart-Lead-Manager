@@ -124,7 +124,7 @@ function TopBar() {
         </button>
       </div>
 
-      <button className="buy-button">Buy With IndiaMART</button>
+      <button className="buy-button">Hello Indiamart</button>
 
       <nav className="top-links">
         <TopLink icon={MessageSquare} label="Lead Manager" />
