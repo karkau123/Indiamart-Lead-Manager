@@ -165,7 +165,6 @@ button {
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
-  animation: blinking 1.5s infinite;
 }
 
 .top-links {
