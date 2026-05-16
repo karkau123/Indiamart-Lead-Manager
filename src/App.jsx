@@ -268,7 +268,7 @@ function Conversation() {
       </section>
 
       <section className="chat-area">
-        <div className="timeline-note">Contact added through Call Enquiry received</div>
+        <div className="timeline-note"><strong>Contact added through Call Enquiry received</strong></div>
         <div className="incoming-card">
           <ProductImage variant="boxes" />
           <div className="incoming-text">
