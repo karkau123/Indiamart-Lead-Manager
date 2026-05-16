@@ -272,7 +272,7 @@ function Conversation() {
         <div className="incoming-card">
           <ProductImage variant="boxes" />
           <div className="incoming-text">
-            <p>Call attempted for Reverse<br />Printing Lamination Inks on<br />+917942641065</p>
+            <p>Call attempted for Reverse<br />Printing Lamination Inks on<br /><strong>+917942641065</strong></p>
             <div className="incoming-bottom">
               <span className="phone-bubble"><PhoneMissed size={19} /></span>
               <time>11 May, 2:07 PM</time>
