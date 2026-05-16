@@ -83,11 +83,6 @@ const contacts = [
 
 const quickActions = [
   { label: "Share more details", icon: MessageSquare },
-  { label: "Introduction", icon: MessageSquare },
-  { label: "Catalog Link", icon: MessageSquare },
-  { label: "Share Video", icon: Play, red: true },
-  { label: "Share PDF", icon: FileText, pdf: true },
-  { label: "Send Quotation", icon: FileText, pdf: true },
 ];
 
 const products = [
