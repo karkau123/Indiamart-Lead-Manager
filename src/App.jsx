@@ -252,7 +252,6 @@ function Conversation() {
           </div>
           <div className="lead-meta">
             <span><Store size={16} /> Akshu Enterpris...</span>
-            <span><MapPin size={17} /> Dehradun, Uttarak...</span>
             <span><Phone size={17} /> 06396464456</span>
             <span><MailCheck size={19} /></span>
           </div>
