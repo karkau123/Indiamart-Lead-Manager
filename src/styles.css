@@ -713,8 +713,11 @@ button {
   place-items: center;
   margin: 0 auto;
   border: 1px solid #bdbdbd;
-  background: #fff;
+  background: #f0f1ff;
   font-size: 14px;
+  font-weight: 600;
+  color: #1b1887;
+  border-radius: 4px;
 }
 
 .incoming-card {
