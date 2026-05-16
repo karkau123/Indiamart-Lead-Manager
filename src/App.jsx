@@ -29,7 +29,6 @@ import {
   Play,
   Search,
   Settings,
-  ShieldCheck,
   ShoppingCart,
   Store,
   Tag,
@@ -255,7 +254,7 @@ function Conversation() {
           <div className="lead-meta">
             <span><Store size={16} /> Akshu Enterpris...</span>
             <span><MapPin size={17} /> Dehradun, Uttarak...</span>
-            <span><ShieldCheck size={17} /> 06396464456</span>
+            <span><Phone size={17} /> 06396464456</span>
             <span><MailCheck size={19} /></span>
           </div>
         </div>
