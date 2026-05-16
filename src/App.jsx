@@ -24,7 +24,6 @@ import {
   Paperclip,
   PenLine,
   Phone,
-  PhoneCall,
   PhoneMissed,
   Play,
   Search,
@@ -260,7 +259,6 @@ function Conversation() {
         </div>
         <div className="lead-actions">
           <button><Layers size={23} /></button>
-          <button className="call-action"><PhoneCall size={24} /></button>
           <button className="view-more">View<br />More</button>
           <span className="red-notice" />
         </div>
