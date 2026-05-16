@@ -228,17 +228,22 @@ function ContactRow({ contact }) {
   return (
     <article className={`contact-row ${contact.selected ? "selected" : ""}`}>
       <div className="contact-main">
-        <div className="contact-name">
-          <strong>{contact.name}</strong>
-          {contact.tags?.includes("whatsapp") && <MessageSquare size={16} className="teal-icon" />}
-          {contact.tags?.includes("tag") && <Tag size={16} className="blue-icon" fill="#4a88e8" />}
-          {contact.tags?.includes("orange") && <Tag size={17} className="orange-icon" fill="#f39a00" />}
+        <div className="contact-header">
+          <div className="contact-name">
+            <strong>{contact.name}</strong>
+            {contact.tags?.includes("whatsapp") && <MessageSquare size={14} className="teal-icon" />}
+            {contact.tags?.includes("tag") && <Tag size={14} className="blue-icon" fill="#4a88e8" />}
+            {contact.tags?.includes("orange") && <Tag size={14} className="orange-icon" fill="#f39a00" />}
+          </div>
         </div>
-        <div className="contact-city">{contact.city}</div>
+        <time>{contact.time}</time>
+        <div className="contact-info">
+          <MapPin size={13} style={{ color: "#999", flexShrink: 0 }} />
+          <span className="contact-city">{contact.city}</span>
+          {contact.product && <button className="product-pill">{contact.product}</button>}
+        </div>
         <div className="contact-note">{contact.note}</div>
-        {contact.product && <button className="product-pill">{contact.product}</button>}
       </div>
-      <time>{contact.time}</time>
     </article>
   );
 }
